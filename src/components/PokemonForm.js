@@ -13,6 +13,14 @@ class PokemonForm extends React.Component {
     }
   }
 
+  // componentDidMount(){
+  //   fetch("http://localhost:3000/pokemon")
+  //   .then(res => res.json())
+  //   .then(data => console.log(data));
+  //   //will be back 
+  // }
+
+
   render() {
     return (
       <div>
