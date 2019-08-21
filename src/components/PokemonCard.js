@@ -2,20 +2,27 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 
 class PokemonCard extends React.Component {
+  
   render() {
+    let pokemonStats1 = this.props.pokemon.stats
+    
+  console.log(pokemonStats1);
     return (
       <Card>
         <div>
           <div className="image">
-            <img alt="oh no!" />
+            <img alt='' src={this.props.pokemon.sprites.front} />
           </div>
           <div className="content">
-            <div className="header">POKEMON NAME HERE</div>
+            <div className="header">{this.props.pokemon.name}</div>
           </div>
           <div className="extra content">
+      
+            {this.props.pokemon.stats.find(object => object.name === "hp").value}
             <span>
+              {/* {pokemonStats.value} */}
               <i className="icon heartbeat red" />
-              POKEMON HP HERE hp
+           
             </span>
           </div>
         </div>
